@@ -1,0 +1,27 @@
+<%= form_with(model: single_housing, local: true) do |form| %>
+  <% if single_housing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(single_housing.errors.count, "error") %> prohibited this single_housing from being saved:</h2>
+
+      <ul>
+      <% single_housing.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :single_housing_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :single_housing_description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

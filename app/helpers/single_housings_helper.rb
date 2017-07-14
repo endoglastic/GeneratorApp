@@ -1,0 +1,2 @@
+module SingleHousingsHelper
+end
