@@ -9,9 +9,7 @@
       <div>
         <p><%= single_housing.title %></p>
         <p><%= single_housing.description %></p>
-        <p><%= link_to 'Show', single_housing %></p>
-        <p><%= link_to 'Edit', edit_single_housing_path(single_housing) %></p>
-        <p><%= link_to 'Delete', single_housing, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        <p><%= link_to 'Show', single_housing %> <%= link_to 'Edit', edit_single_housing_path(single_housing) %> <%= link_to 'Delete', single_housing, method: :delete, data: { confirm: 'Are you sure?' } %></p>
       </div>
     <% end %>
   </div>
